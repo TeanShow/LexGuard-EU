@@ -1,92 +1,48 @@
-\# LexGuard EU ⚖️🤖
+# LexGuard EU ⚖️🤖
 
-\*\*High-Efficiency GDPR Compliance Assistant \& RAG-Powered Legal Engine\*\*
+**Efficiency-driven RAG engine for GDPR Compliance.**
 
+LexGuard EU is a modular assistant designed to navigate the complexity of European legal frameworks. Instead of relying on a model's "memory", it uses a specialized RAG (Retrieval-Augmented Generation) pipeline to ground every answer in official law.
 
+---
 
-LexGuard EU is a modular AI-powered assistant designed to navigate complex legal frameworks like the GDPR. Unlike generic LLM wrappers, LexGuard uses a specialized RAG (Retrieval-Augmented Generation) pipeline to provide verifiable, context-aware legal analysis with extreme cost efficiency.
+### 🚀 Key Principles
 
+**Verifiable Accuracy**
+The system performs semantic searches across all 99 Articles of the GDPR using `ChromaDB` and multilingual embeddings. No guessing, just citations.
 
+**Extreme Cost Efficiency**
+Engineered for production. While legacy systems cost dollars per query, LexGuard processed **70,000 tokens for just $0.02** during stress tests.
 
-\---
+**Architectural Flexibility**
+The "LLM Brain" is swappable. Switch between **DeepSeek-R1**, **Qwen-2.5**, or local **Llama-3** by modifying only 5 lines of code.
 
+---
 
+### 🛠 Tech Stack
 
-\## 🚀 Key Features
+| Component | Technology |
+| :--- | :--- |
+| **Logic** | Python 3.10+ / OpenAI-compatible API |
+| **Vector DB** | ChromaDB (Persistent storage) |
+| **Embeddings** | paraphrase-multilingual-mpnet-base-v2 |
+| **Interface** | Gradio (Clean Dark Mode) |
 
+---
 
+### 📂 Project Structure
 
-\* \*\*Verifiable RAG Engine:\*\* Utilizes `ChromaDB` and `paraphrase-multilingual-mpnet-base-v2` embeddings to perform semantic searches across all 99 Articles of the GDPR.
+* `app.py` — The UI and orchestration layer.
+* `api.py` — Core RAG logic and LLM management.
+* `adderparser.py` — Tool for real-time document ingestion into the database.
+* `parserEU.py` — Initial parser for the GDPR framework.
+* `requirements.txt` — List of dependencies.
+* `.env.example` — Configuration template for API keys.
 
-\* \*\*Model-Agnostic Architecture:\*\* Swappable "LLM Brains". Easily switch between \*\*DeepSeek-R1\*\*, \*\*Qwen-2.5-Audio\*\*, or local \*\*Llama-3\*\* with just two lines of code.
+---
 
-\* \*\*Dynamic Document Ingestion:\*\* Includes a `live\_parser.py` utility to instantly expand the knowledge base with new HTML/Legal documents.
+### ⚙️ Getting Started
 
-\* \*\*Cost-Optimized:\*\* Engineered for production. Performance metrics show \~70k tokens processed for as little as \*\*$0.02 USD\*\*.
-
-\* \*\*Security First:\*\* Strictly follows environment variable standards for API key management; zero-leakage design.
-
-
-
-\---
-
-
-
-\## 🛠 Tech Stack
-
-
-
-\* \*\*Language:\*\* Python 3.10+
-
-\* \*\*LLM Core:\*\* DeepSeek-R1 / Qwen-2.5 (via OpenAI-compatible API)
-
-\* \*\*Vector Database:\*\* ChromaDB (Persistent local storage)
-
-\* \*\*Frontend:\*\* Gradio (Modern Dark Theme UI)
-
-\* \*\*Document Processing:\*\* BeautifulSoup4 \& DocxTemplate (for automated document generation)
-
-
-
-\---
-
-
-
-\## 📊 The "2-Cent" Benchmark
-
-
-
-One of the core objectives of this project is to prove that high-tier legal AI doesn't require "Enterprise" budgets. 
-
-
-
-| Metric | LexGuard (DeepSeek RAG) | Standard SOTA (Claude Opus) |
-
-| :--- | :--- | :--- |
-
-| \*\*Input Cost (1M Tokens)\*\* | \~$0.27 | \~$15.00 - $18.00 |
-
-| \*\*Accuracy\*\* | High (Context-Anchored) | Variable (Hallucination risk) |
-
-| \*\*Scalability\*\* | High (Pay-as-you-go) | Low (Fixed/High subscriptions) |
-
-
-
-\---
-
-
-
-\## ⚙️ Quick Start
-
-
-
-\### 1. Clone \& Install
-
-```bash
-
-git clone \[https://github.com/your-username/lexguard-eu.git](https://github.com/your-username/lexguard-eu.git)
-
-cd lexguard-eu
-
-pip install -r requirements.txt
-
+1. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
