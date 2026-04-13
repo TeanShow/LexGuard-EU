@@ -46,5 +46,5 @@ The "LLM Brain" is swappable. Switch between **DeepSeek-R1**, **Qwen-2.5**, or l
 1. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
-   echo "DEEPSEEK_API_KEY=твой_ключ_здесь" > .env
+   echo "DEEPSEEK_API_KEY=your_api_key_here" > .env
    python app.py
