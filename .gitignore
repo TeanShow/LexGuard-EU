@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pyc
+legal_db/
+ingest_now/*
+!ingest_now/.gitkeep
+downloads/
+.DS_Store
