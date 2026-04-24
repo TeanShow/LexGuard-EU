@@ -9,6 +9,8 @@ import chromadb
 from sentence_transformers import SentenceTransformer
 API_KEY = os.getenv("DEEPSEEK_API_KEY")
 BASE_URL = "https://api.deepseek.com"
+#API_KEY = "lm-studio" name of local provider
+#BASE_URL = "http://localhost:1234/v1"  for local launching from local server in LM Studio
 TEMPLATES_DIR = "tagged_templates"
 DOWNLOADS_DIR = "downloads"
 REGISTRY_FILE = "templates_registry.json"
